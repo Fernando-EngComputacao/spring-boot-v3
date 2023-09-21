@@ -1,12 +1,16 @@
 package med.api.assets.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/search")
+@RequestMapping("/doctor")
 public class MedController {
+
+
+    @PostMapping("/search")
+    public String register(@RequestBody String json){
+        return json;
+    }
 
     @GetMapping
     public String helloWorld(){
