@@ -23,8 +23,10 @@ public class Doctor {
     private Especialidade especialidade;
     @Embedded
     private Endereco endereco;
+    private Boolean ativo;
 
     public Doctor(InputFormDoctor form) {
+        this.ativo = true;
         this.nome = form.nome();
         this.crm = form.crm();
         this.email = form.email();
@@ -43,4 +45,7 @@ public class Doctor {
             this.endereco.updateAddress(data.endereco());
     }
 
+    public void desable() {
+        this.ativo = false;
+    }
 }

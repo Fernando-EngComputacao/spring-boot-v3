@@ -32,6 +32,11 @@ public class MedController {
         return doctorRepository.findAll(page).map(ListingDoctor::new);
     }
 
+    @GetMapping("/status")
+    public Page<ListingDoctor> findAllByAtivo(@PageableDefault(size = 10, sort = {"nome"}) Pageable page){
+        return doctorRepository.findAllByAtivoTrue(page).map(ListingDoctor::new);
+    }
+
     @PutMapping("/{id}")
     @Transactional
     public void update(@RequestBody @Valid UpdateFormDoctor data){
@@ -43,5 +48,12 @@ public class MedController {
     @Transactional
     public void delete(@PathVariable Long id){
         doctorRepository.deleteById(id);
+    }
+
+    @DeleteMapping("/logical/{id}")
+    @Transactional
+    public void logicalDelete(@PathVariable Long id) {
+        var doctor = doctorRepository.getReferenceById(id);
+        doctor.desable();
     }
 }
