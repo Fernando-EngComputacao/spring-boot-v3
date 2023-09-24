@@ -1,8 +1,48 @@
-# Java project in Spring Boot version 3
+## 💻 Sobre o projeto
 
-1. Base situation of the project: it refers to a medical office,
-in which it is possible to do CRUD, using Mysql.
-2. The main branch is "develop"
+Voll.med é uma clínica médica fictícia que precisa de um aplicativo para gestão de consultas. O aplicativo deve possuir funcionalidades que permitam o cadastro de médicos e de pacientes, e também o agendamento e cancelamento de consultas.
 
+Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o nosso será responsável pelo desenvolvimento da API Rest desse projeto.
 
-#### Author: Fernando Furtado - 2023
+---
+
+## ⚙️ Funcionalidades
+
+- [x] CRUD de médicos;
+- [ ] CRUD de pacientes(em breve);
+- [ ] Agendamento de consultas(em breve);
+- [ ] Cancelamento de consultas(em breve);
+
+---
+
+## 🎨 Layout
+
+O layout da aplicação mobile está disponível neste link: <a href="https://www.figma.com/file/N4CgpJqsg7gjbKuDmra3EV/Voll.med">Figma</a>
+
+---
+
+## 📄 Documentação
+
+A documentação das funcionalidades da aplicação pode ser acessada neste link: <a href="https://trello.com/b/O0lGCsKb/api-voll-med">Trello</a>
+
+---
+
+## 🛠 Tecnologias
+
+As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
+
+- **[Java 17](https://www.oracle.com/java)**
+- **[Spring Boot 3](https://spring.io/projects/spring-boot)**
+- **[Maven](https://maven.apache.org)**
+- **[MySQL](https://www.mysql.com)**
+- **[Hibernate](https://hibernate.org)**
+- **[Flyway](https://flywaydb.org)**
+- **[Lombok](https://projectlombok.org)**
+
+---
+
+## 📝 Licença
+
+Estrutura do projeto elaborado por [Alura](https://www.alura.com.br) e construído por [Fernando Furtado](https://github.com/Fernando-EngComputacao/) em curso de Spring Boot.
+
+---
