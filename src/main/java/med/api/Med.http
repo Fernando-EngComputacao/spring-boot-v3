@@ -39,3 +39,6 @@ Content-Type: application/json
   "id": "4",
   "nome": "Ana Clara"
 }
+
+### DELETE MED
+DELETE http://localhost:1010/doctor/1
