@@ -2,7 +2,7 @@ package med.api.assets.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import med.api.assets.dto.InputFormDoctor;
+import med.api.assets.dto.input.InputFormDoctor;
 import med.api.assets.dto.details.Especialidade;
 
 @Getter

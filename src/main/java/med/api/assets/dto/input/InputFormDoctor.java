@@ -1,4 +1,4 @@
-package med.api.assets.dto;
+package med.api.assets.dto.input;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
