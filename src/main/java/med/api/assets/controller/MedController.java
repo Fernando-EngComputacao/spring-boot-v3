@@ -1,5 +1,6 @@
 package med.api.assets.controller;
 
+import jakarta.validation.Valid;
 import med.api.assets.dto.InputFormDoctor;
 import med.api.assets.model.Doctor;
 import med.api.assets.repository.DoctorRepository;
@@ -14,10 +15,8 @@ public class MedController {
     private DoctorRepository doctorRepository;
 
     @PostMapping("/search")
-    public InputFormDoctor register(@RequestBody InputFormDoctor data){
-
+    public void register(@RequestBody @Valid InputFormDoctor data){
         doctorRepository.save(new Doctor(data));
-        return data;
     }
 
     @GetMapping

@@ -11,7 +11,7 @@ Content-Type: application/json
 {
 	"nome": "Fernando Furtado",
 	"email": "fernando.furtado@gmail.com",
-	"crm": "45",
+	"crm": "457895",
     "especialidade": "GINECOLOGIA",
 	"endereco": {
 		"logradouro": "Rua a",
