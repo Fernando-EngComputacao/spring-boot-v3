@@ -1,5 +1,6 @@
 package med.api.assets.controller;
 
+import med.api.assets.dto.InputFormDoctor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,8 +9,9 @@ public class MedController {
 
 
     @PostMapping("/search")
-    public String register(@RequestBody String json){
-        return json;
+    public InputFormDoctor register(@RequestBody InputFormDoctor data){
+        System.out.println(data.toString());
+        return data;
     }
 
     @GetMapping

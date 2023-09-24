@@ -11,7 +11,8 @@ Content-Type: application/json
 {
 	"nome": "Fernando Furtado",
 	"email": "fernando.furtado@gmail.com",
-	"crm": "oftalmologista",
+	"crm": "45",
+    "especialidade": "GINECOLOGIA",
 	"endereco": {
 		"logradouro": "Rua a",
 		"bairro": "Setor Cristina II Expansão",
