@@ -1,7 +1,9 @@
 package med.api.assets.controller;
 
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import med.api.assets.dto.input.InputFormDoctor;
+import med.api.assets.dto.input.UpdateFormDoctor;
 import med.api.assets.dto.ouput.ListingDoctor;
 import med.api.assets.model.Doctor;
 import med.api.assets.repository.DoctorRepository;
@@ -28,5 +30,12 @@ public class MedController {
     @GetMapping
     public Page<ListingDoctor> findAll(@PageableDefault(size = 10, sort = {"nome"}) Pageable page){
         return doctorRepository.findAll(page).map(ListingDoctor::new);
+    }
+
+    @PutMapping("/{id}")
+    @Transactional
+    public void update(@RequestBody @Valid UpdateFormDoctor data){
+        var doctor = doctorRepository.getReferenceById(data.id());
+        doctor.updateInformations(data);
     }
 }

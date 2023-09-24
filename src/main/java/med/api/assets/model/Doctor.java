@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import med.api.assets.dto.input.InputFormDoctor;
 import med.api.assets.dto.details.Especialidade;
+import med.api.assets.dto.input.UpdateFormDoctor;
 
 @Getter
 @AllArgsConstructor
@@ -32,4 +33,14 @@ public class Doctor {
         this.endereco = new Endereco(form.endereco());
 
     }
+
+    public void updateInformations(UpdateFormDoctor data) {
+        if (data.nome() != null)
+            this.nome = data.nome();
+        if (data.telefone() != null)
+            this.telefone = data.telefone();
+        if (data.endereco() != null)
+            this.endereco.updateAddress(data.endereco());
+    }
+
 }
