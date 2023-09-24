@@ -1,10 +1,7 @@
 package med.api.assets.model;
 
 import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -19,4 +16,16 @@ public class Endereco {
     private String uf;
     private String complemento;
     private String numero;
+
+
+
+    public Endereco(Endereco data) {
+        this.logradouro = data.getLogradouro();
+        this.bairro = data.getBairro();
+        this.cep = data.getCep();
+        this.cidade = data.getCidade();
+        this.uf = data.getUf();
+        this.complemento = data.getComplemento();
+        this.numero = data.getNumero();
+    }
 }

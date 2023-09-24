@@ -2,10 +2,10 @@ package med.api.assets.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import med.api.assets.dto.InputFormDoctor;
 import med.api.assets.dto.details.Especialidade;
 
 @Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -21,4 +21,13 @@ public class Doctor {
     private Especialidade especialidade;
     @Embedded
     private Endereco endereco;
+
+    public Doctor(InputFormDoctor form) {
+        this.nome = form.nome();
+        this.crm = form.crm();
+        this.email = form.email();
+        this.especialidade = form.especialidade();
+        this.endereco = new Endereco(form.endereco());
+
+    }
 }
