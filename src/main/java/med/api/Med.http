@@ -23,3 +23,26 @@ Content-Type: application/json
 		"complemento": "casa"
 	}
 }
+
+
+### POST MED2
+POST http://localhost:1010/doctor/search
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nome": "Bruna Maria",
+  "email": "bruna.maria@gmail.com",
+  "crm": "123654",
+  "telefone": "(62) 9 9563-1247",
+  "especialidade": "CARDIOLOGIA",
+  "endereco": {
+    "logradouro": "Rua a",
+    "bairro": "Setor Cristina II Expansão",
+    "cep": "75389328",
+    "cidade": "Trindade",
+    "uf": "GO",
+    "numero": "4",
+    "complemento": "casa"
+  }
+}
